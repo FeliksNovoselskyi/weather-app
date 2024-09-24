@@ -8,9 +8,11 @@ const webApp = express()
 const PORT = process.env.PORT || 3000
 const HOST = process.env.HOST || 'localhost'
 
+webApp.set('view engine', 'ejs')
+webApp.set('views', './templates')
 
 webApp.get('/', (req, res) => {
-    res.send('Hello, Sweater Weather!')
+    res.render('index')
 })
 
 webApp.listen(PORT, HOST, () => {
