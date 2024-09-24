@@ -1,9 +1,12 @@
 import express from 'express'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const webApp = express()
 
-const PORT = 8000
-const HOST = 'localhost'
+const PORT = process.env.PORT
+const HOST = process.env.HOST
 
 
 webApp.get('/', (req, res) => {
