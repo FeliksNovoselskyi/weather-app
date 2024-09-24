@@ -1,0 +1,14 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "weather app, using express, nodejs, api for updating weather",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Feliks Novoselskyi <felixdnbox@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
