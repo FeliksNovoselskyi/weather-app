@@ -5,8 +5,8 @@ dotenv.config()
 
 const webApp = express()
 
-const PORT = process.env.PORT
-const HOST = process.env.HOST
+const PORT = process.env.PORT || 3000
+const HOST = process.env.HOST || 'localhost'
 
 
 webApp.get('/', (req, res) => {
