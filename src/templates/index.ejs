@@ -15,6 +15,7 @@
         <% if (error) { %>
             <p class="error"><%= error%></p>
         <% } else if (weather) { %>
+            <!-- Weather info -->
             <div class="card">
                 <p>Temperature: <%=weather.main.temp%>&deg;F</p>
                 <p>Sky: <%=weather.weather[0].main%></p>
