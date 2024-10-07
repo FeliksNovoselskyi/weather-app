@@ -6,22 +6,28 @@
     <title>Weather App</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Weather App</h1>
-        <form action="/" method="get">
-            <input type="text" name="city" placeholder="Enter name of your city">
-            <button type="submit">Get weather</button>
-        </form>
-        <% if (error) { %>
-            <p class="error"><%= error%></p>
-        <% } else if (weather) { %>
-            <!-- Weather info -->
-            <div class="card">
-                <p>Temperature: <%=weather.main.temp%>&deg;F</p>
-                <p>Sky: <%=weather.weather[0].main%></p>
-                <p>Location: <%=weather.name%> <%=weather.sys.country%></p>
+    <main>
+        <div class="weather-container">
+            <div class="enter-container">
+                <h1>Enter your city!</h1>
+    
+                <form action="/" method="get">
+                    <input type="text" name="city" placeholder="Enter name of your city">
+                    <button type="submit">Get weather</button>
+                </form>
             </div>
-        <% } %>
-    </div>
+            <div class="info-container">
+                <% if (error) { %>
+                    <p class="error"><%= error%></p>
+                <% } else if (weather) { %>
+                    <div class="card">
+                        <p>Temperature: <%=weather.main.temp%>&deg;C</p>
+                        <p>Sky: <%=weather.weather[0].main%></p>
+                        <p>Location: <%=weather.name%> <%=weather.sys.country%></p>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

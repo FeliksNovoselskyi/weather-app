@@ -25,7 +25,7 @@ app.use('/static/', express.static(join(__dirname, 'static')))
 app.get('/', async (req, res) => {
     const city = req.query.city
 
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
     
     let weather
     let error = null
